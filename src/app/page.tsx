@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Newt・Next.jsブログ',
-  description: 'NewtとNext.jsを利用したブログです',
+  description: 'NewtとNext.jsを利用したブログですよ',
 }
 
 export default async function Home() {
