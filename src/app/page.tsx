@@ -15,7 +15,7 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <CustomHeader title="TAKEO KOTANI">
-        <p>This is Kotani's Portfolio Site</p>
+        <p>This is Kotani&apos;s Portfolio Site</p>
       </CustomHeader>
       <HomeClient articles={articles} />
     </main>

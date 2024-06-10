@@ -1,26 +1,3 @@
-// import { Inter } from "next/font/google";
-// import "./globals.css";
-// import "@/app/components/Navbar";
-// import Navbar from "@/app/components/Navbar";
-
-// // フォントの指定
-// const inter = Inter({ subsets: ["latin"] });
-
-// export default function RootLayout({
-//   children,
-// }: Readonly<{
-//   children: React.ReactNode;
-// }>) {
-//   return (
-//     <html lang="ja">
-//       <body className={inter.className}>
-//         <Navbar></Navbar>
-//         {children}
-//       </body>
-//     </html>
-//   );
-// }
-
 "use client";
 
 import React, { useEffect } from 'react';
@@ -32,7 +9,11 @@ import gsap from 'gsap';
 // フォントの指定
 const inter = Inter({ subsets: ['latin'] });
 
-export default function RootLayout({ children }) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   useEffect(() => {
     gsap.fromTo(
       'body',

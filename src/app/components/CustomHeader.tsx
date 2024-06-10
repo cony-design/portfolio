@@ -1,6 +1,11 @@
 import Head from 'next/head';
 
-const CustomHeader = ({ title, children }) => (
+interface CustomHeaderProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const CustomHeader = ({ title, children }: CustomHeaderProps) => (
   <>
     <Head>
       <title>TAKEO KOTANI</title>

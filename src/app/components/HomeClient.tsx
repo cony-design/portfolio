@@ -1,6 +1,10 @@
-"use client";
 import Link from 'next/link'
 import styled from 'styled-components';
+import { Article } from '@/types/article'; // Assuming Article is a type for your articles
+
+interface HomeClientProps {
+  articles: Article[]; // Assuming Article is a type for your articles
+}
 
 const Container = styled.div`
   padding: 24px;
@@ -19,9 +23,7 @@ const NewsList = styled.ul`
 const NewsArticle = styled.li`
 `;
 
-
-const HomeClient = ({ articles }) => {
- 
+const HomeClient = ({ articles }: HomeClientProps) => {
   return (
     <Container>
       <NewsList>
