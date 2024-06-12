@@ -1,10 +1,8 @@
-import Link from 'next/link'
-import styled from 'styled-components';
-import { Article } from '@/types/article'; // Assuming Article is a type for your articles
+"use client";
 
-interface HomeClientProps {
-  articles: Article[]; // Assuming Article is a type for your articles
-}
+import React from 'react';
+import Link from 'next/link';
+import styled from 'styled-components';
 
 const Container = styled.div`
   padding: 24px;
@@ -20,10 +18,17 @@ const NewsList = styled.ul`
   padding-block-end: .25em;
 `;
 
-const NewsArticle = styled.li`
-`;
+const NewsArticle = styled.li``;
 
-const HomeClient = ({ articles }: HomeClientProps) => {
+interface HomeClientProps {
+  articles: Array<{
+    _id: string;
+    slug: string;
+    title: string;
+  }>;
+}
+
+const HomeClient: React.FC<HomeClientProps> = ({ articles }) => {
   return (
     <Container>
       <NewsList>
@@ -34,7 +39,7 @@ const HomeClient = ({ articles }: HomeClientProps) => {
         ))}
       </NewsList>
     </Container>
-  )
-}
+  );
+};
 
 export default HomeClient;

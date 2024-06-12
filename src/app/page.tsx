@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { getArticles } from '@/lib/newt'
 import styles from '@/app/page.module.css'
 import CustomHeader from '@/app/components/CustomHeader'
