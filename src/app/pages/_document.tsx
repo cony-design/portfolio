@@ -1,6 +1,7 @@
 "use client";
 import Document from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import React, { ComponentType } from 'react';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx:any) {
@@ -10,7 +11,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App: ComponentType) => (props: React.ComponentProps<typeof App>) => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
