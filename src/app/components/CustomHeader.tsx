@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import styles from './CustomHeader.module.scss';
 
 interface CustomHeaderProps {
   title: string;
@@ -11,10 +12,10 @@ const CustomHeader = ({ title, children }: CustomHeaderProps) => (
       <title>TAKEO KOTANI</title>
       <meta name="description" content="NewtとNext.jsを利用したTAKEO KOTANIのサイトです" />
     </Head>
-    <header>
-      <h1>{title}</h1>
-      {children}
-    </header>
+    <section className={styles.CustomHeader}>
+      <h1 className={styles.Title}>{title}</h1>
+      <p className={styles.Desc}>{children}</p>
+    </section>
   </>
 );
 
