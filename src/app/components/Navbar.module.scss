@@ -1,0 +1,18 @@
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-index-navigation-top);
+
+  ul {
+    display: inline-flex;
+    gap: 12px;
+    list-style-type: none;
+    padding: 2vw;
+
+    li {
+
+    }
+  }
+}
